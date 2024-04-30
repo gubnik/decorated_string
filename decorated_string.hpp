@@ -1,5 +1,6 @@
 
 #include <string>
+#include <array>
 
 namespace decstr
 {
@@ -34,20 +35,26 @@ namespace decstr
      * @param intensity - intensity of the string inside the decorator (default/background/text)
      * @param special   - none/bold/underlined
      */
-    std::string make_decorated (const std::string& strref,
-            decstr::ansi_colour colour,
-            decstr::ansi_intensity intensity = DEFAULT,
-            decstr::ansi_special special = NONE
-            )
-    {
-        int imod = (intensity == 0) ? 0 : (intensity == 1) ? 60 : 70;
-        std::string ret = "\033["
-            + std::to_string((int) special)
-            + ';'
-            + std::to_string(30 + colour + imod)
-            + 'm';
-        ret += strref;
-        ret += "\033[m";
-        return ret;
-    }
+    std::string make_decorated (const std::string&,
+            decstr::ansi_colour,
+            decstr::ansi_intensity,
+            decstr::ansi_special
+            );
+}
+
+std::string decstr::make_decorated (const std::string& strref,
+        decstr::ansi_colour colour,
+        decstr::ansi_intensity intensity = decstr::DEFAULT,
+        decstr::ansi_special special = decstr::NONE
+    )
+{
+    int imod = (intensity == 0) ? 0 : (intensity == 1) ? 60 : 70;
+    std::string ret = "\033["
+        + std::to_string((int) special)
+        + ';'
+        + std::to_string(30 + colour + imod)
+        + 'm';
+    ret += strref;
+    ret += "\033[m";
+    return ret;
 }
