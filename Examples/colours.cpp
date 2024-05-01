@@ -1,5 +1,4 @@
-#include "../decorated_string.hpp"
-#include <string>
+#include "../decstr_def.hpp"
 
 int main (int argc, char ** argv)
 {
