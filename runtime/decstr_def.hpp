@@ -1,4 +1,4 @@
-#include "../decstr_enum.hpp"
+#include "decstr_enum.hpp"
 
 #include <string>
 
