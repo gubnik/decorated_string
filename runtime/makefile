@@ -1,7 +1,7 @@
 CC=g++
 FLAGS=-Wpedantic -O3
 T=decstr_def
-VERSION=0.1.0
+VERSION=0.1.1
 
 install: $T
 	cp ../decstr_enum.hpp /usr/include/decstr_enum.hpp
