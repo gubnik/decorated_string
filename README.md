@@ -1,4 +1,4 @@
-# Decorated String
+# Decorated String 0.1.0
 A small lib for wrapping `std::string` with ANSI Escape codes. Only works for environments with ANSI Escape codes support (Linux terminal, for example).
 
 # Specifics
@@ -9,10 +9,12 @@ The lib was tested on *x86_64 Arch Linux* system with *GCC 13.2.1*.
 # How to use
 ## For runtime:
 1. `git clone https://github.com/gubnik/decorated_string`
-2. `sudo make install`
+2. `cd decorated_string/runtime`
+3. `sudo make install`
+4. Don't forget to link *libdecstr.so.%VERSION%`
 ## For compile time
 1. Copy the header in your project dir
-2. Include it
+2. Include it (see "Known issues")
 
 # Known issues
 - **!! IMPORTANT !!** I'm not sure if my way of doing `make install` is the correct one. It works for my 3 machines (Arch, Gentoo, Ubuntu) but it may still break.
