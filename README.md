@@ -11,7 +11,7 @@ The lib was tested on *x86_64 Arch Linux* system with *GCC 13.2.1*.
 1. `git clone https://github.com/gubnik/decorated_string`
 2. `cd decorated_string/runtime`
 3. `sudo make install`
-4. Don't forget to link *libdecstr.so.%VERSION%`
+4. Don't forget to link `libdecstr.so.%VERSION%`
 ## For compile time
 1. Copy the header in your project dir
 2. Include it (see "Known issues")
